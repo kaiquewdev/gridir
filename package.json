@@ -4,7 +4,7 @@
   "description": "Make directory structure based on literal object.",
   "main": "./lib/index.js",
   "bin": {
-    "gridir": "./bin/index.js"    
+    "gridir": "./bin/index.js"
   },
   "scripts": {
     "test": "echo \"Running the tests...\" && mocha -u tdd test/**/*.test.js && exit 0"
@@ -18,7 +18,8 @@
   "license": "BSD",
   "dependencies": {
     "mkdirp": "~0.3.5",
-    "traverse": "~0.6.6"
+    "traverse": "~0.6.6",
+    "commander": "~2.1.0"
   },
   "devDependencies": {
     "should": "~2.1.0"
