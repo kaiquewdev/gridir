@@ -2,8 +2,10 @@
   "name": "gridir",
   "version": "0.0.1",
   "description": "Make directory structure based on literal object.",
-  "main": "lib/index.js",
-  "bin": "bin/index.js",
+  "main": "./lib/index.js",
+  "bin": {
+    "gridir": "./bin/index.js"    
+  },
   "scripts": {
     "test": "echo \"Running the tests...\" && mocha -u tdd test/**/*.test.js && exit 0"
   },
