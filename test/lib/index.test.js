@@ -22,7 +22,7 @@ suite('gridir', function () {
             var expected = gridir;
 
             function treeStepHandler ( err, track ) {
-                fs.existsSync( track );
+                fs.existsSync( track ).should.be.ok;
             }
 
             gridir
@@ -32,6 +32,10 @@ suite('gridir', function () {
                 .be
                 .eql( expected );   
 
+            done();
+        });
+
+        after(function () {
             rm = spawn( 'rm', [ 
                 '-rf', 
                 'case/' 
@@ -39,7 +43,6 @@ suite('gridir', function () {
                 cwd: [ __dirname, '..', '..' ].join('/') 
             });
 
-            done();
         });
     });
 });
